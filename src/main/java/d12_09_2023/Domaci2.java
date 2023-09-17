@@ -26,10 +26,10 @@ public static void main(String[] args) {
 
     ArrayList<ZeleniKarton> ispiti = new ArrayList<>();
 
-    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Matematika", "Aca Petrovic", 9));
-    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Srpski", "Petar Petrovic", 8));
-    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Engleski jezik", "Ivan Urosevic", 6));
-    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Programiranje", "Ana Anic", 7));
+    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Matematika", "Aca Petrovic", 10));
+    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Srpski", "Petar Petrovic", 10));
+    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Engleski jezik", "Ivan Urosevic", 10));
+    ispiti.add(new ZeleniKarton("Pera Peric", "456", "Programiranje", "Ana Anic", 6));
     ispiti.add(new ZeleniKarton("Pera Peric", "456", "WEB dizajn", "Ivana Zivic", 5));
 
         int zbirOcena = 0;
@@ -39,6 +39,19 @@ public static void main(String[] args) {
     double prosecnaOcena = zbirOcena / ispiti.size();
 
     System.out.println("Prosecna ocena je: " + prosecnaOcena);
+
+            int counterPolozeniIpisti = 0;
+            int zbirOcenaPolozeniIspiti = 0;
+    for (int i = 0; i < ispiti.size(); i++) {
+        if (ispiti.get(i).getOcena() > 5 && ispiti.get(i).getOcena() <= 10 ) {
+            counterPolozeniIpisti++;
+            zbirOcenaPolozeniIspiti = zbirOcenaPolozeniIspiti + ispiti.get(i).getOcena();
+        }
     }
+    double prosecnaOcenaPolozenihIspita = zbirOcenaPolozeniIspiti / counterPolozeniIpisti;
+    System.out.println(counterPolozeniIpisti);
+    System.out.println("ProsecnaOcena polozenih ispita je " + prosecnaOcenaPolozenihIspita);
+    }
+
 
 }
