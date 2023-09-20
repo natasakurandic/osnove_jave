@@ -1,9 +1,5 @@
 package p18_09_2023;
 
-import p15_09_2023.Figura;
-import p15_09_2023.JednakostranicniTrougao;
-import p15_09_2023.Pravougaonik;
-
 import java.util.ArrayList;
 
 public class Zadatak2 {

@@ -1,7 +1,5 @@
 package p18_09_2023;
 
-import p15_09_2023.Figura;
-
 public class Zadatak2_1 {
     public static void main(String[] args) {
 
